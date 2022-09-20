@@ -1,45 +1,175 @@
 {# Automatically extends the right outer layout and also handles AJAX siutations #}
 {% extends data.outerLayout %}
 
+{% block extraHead %}
+<!-- tailwindcss-->
+<link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+{% endblock %}
+{% block extraBody %}
+{% endblock %}
+
 {% set title = data.piece.title or data.page.title %}
 {% block title %}
-  {{ title }}
-  {% if not title %}
-    {{ apos.log('Looks like you forgot to override the title block in a template that does not have access to an Apostrophe page or piece.') }}
-  {% endif %}
+{{ title }}
+{% if not title %}
+{{ apos.log('Looks like you forgot to override the title block in a template that does not have access to an Apostrophe page or piece.') }}
+{% endif %}
 {% endblock %}
 
 {% block beforeMain %}
-<div class="bp-wrapper">
-  <header class="bp-header">
-    <img class="bp-header__logo" src="/images/logo.png" alt="ApostropheCMS logo">
-    <nav class="bp-nav"></nav>
-    {% if not data.user %}
-      <a class="bp-button bp-header__login" href="/login">Login</a>
-    {% endif %}
+<div>
+  <header class="text-gray-600 bg-gray-100 py-5 px-5">
+    <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+      <a href="/">
+        <img class="bp-header__logo" src="/images/payrallel-logo.png" alt="Payrallel logo">
+      </a>
+      <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
+        {# 👇 Referencing `data.home._children` and looping over them. #}
+        {% for page in data.home._children %}
+        <a class="mr-5 hover:text-gray-700 title-font text-gray-900" aria-current="page" href="{{ page._url }}">
+          {{ page.title }}
+        </a>
+        {% endfor %}
+      </nav>
+    </div>
   </header>
   <main class="bp-main">
-{% endblock %}
+    {% endblock %}
 
-{% block main %}
-  {#
+    {% block main %}
+    {#
     Usually, your page templates in the @apostrophecms/pages module will override
     this block. It is safe to assume this is where your page-specific content
     should go.
   #}
-{% endblock %}
+    {% endblock %}
 
-{% block afterMain %}
+    {% block afterMain %}
   </main>
-  <footer class="bp-footer">
-    <h3>Essential Links</h3>
-    <ul class="bp-footer__links">
-      <li><a href="https://apostrophecms.com/" target="_blank">About ApostropheCMS</a></li>
-      <li><a href="https://chat.apostrophecms.com/" target="_blank">Discord</a></li>
-      <li><a href="https://github.com/apostrophecms/apostrophe/tree/3.0" target="_blank">Github (3.0 branch)</a></li>
-      <li><a href="https://twitter.com/apostrophecms" target="_blank">Twitter</a></li>
-      <li><a href="https://forum.apostrophecms.org" target="_blank">Forum</a></li>
-    </ul>
+
+  <footer class="text-gray-600 bg-gray-100 px-5">
+    <div
+      class="container px-5 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
+      <div class="w-64 flex-shrink-0 md:mx-0 mx-auto">
+        <a href="/" class="">
+          <img class="bp-header__logo" src="/images/payrallel-logo.png" alt="Payrallel logo">
+        </a>
+        <p class="text-sm text-gray-500 ">A universe of payments unlocked.</p>
+      </div>
+      <div class="flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left">
+        <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+          <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">
+            <a href="/">
+              Home
+            </a>
+          </h2>
+          <nav class="list-none mb-10">
+            <li>
+              <a class="text-gray-600 hover:text-gray-800">Blog</a>
+            </li>
+            <li>
+              <a class="text-gray-600 hover:text-gray-800">Our Clients</a>
+            </li>
+            <li>
+              <a class="text-gray-600 hover:text-gray-800">Merchant Login</a>
+            </li>
+            <li>
+              <a class="text-gray-600 hover:text-gray-800">Developer Resource</a>
+            </li>
+          </nav>
+        </div>
+        <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+          <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">Solutions</h2>
+          <nav class="list-none mb-10">
+            <li>
+              <a class="text-gray-600 hover:text-gray-800">For Brick and Mortar</a>
+            </li>
+            <li>
+              <a class="text-gray-600 hover:text-gray-800">For E-commerce</a>
+            </li>
+            <li>
+              <a class="text-gray-600 hover:text-gray-800">For Unattended Retail</a>
+            </li>
+            <li>
+              <a class="text-gray-600 hover:text-gray-800">Bespoke solutions</a>
+            </li>
+          </nav>
+        </div>
+        <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+          <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">Industries We Serve</h2>
+          <nav class="list-none mb-10">
+            <li>
+              <a class="text-gray-600 hover:text-gray-800">Food & Beverages</a>
+            </li>
+            <li>
+              <a class="text-gray-600 hover:text-gray-800">E-Commerce</a>
+            </li>
+            <li>
+              <a class="text-gray-600 hover:text-gray-800">Brick & Mortar Retail</a>
+            </li>
+            <li>
+              <a class="text-gray-600 hover:text-gray-800">Unattended Retail</a>
+            </li>
+          </nav>
+        </div>
+        <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+          <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">Why Payrallel</h2>
+          <nav class="list-none mb-10">
+            <li>
+              <a class="text-gray-600 hover:text-gray-800">Transparent Pricing</a>
+            </li>
+            <li>
+              <a class="text-gray-600 hover:text-gray-800">Fuss-free Set-up</a>
+            </li>
+            <li>
+              <a class="text-gray-600 hover:text-gray-800">Omnichannel Solutions</a>
+            </li>
+            <li>
+              <a class="text-gray-600 hover:text-gray-800">Converged Convenience</a>
+            </li>
+          </nav>
+        </div>
+      </div>
+    </div>
+
+    <div class="border-t border-gray-200">
+      <div class="flex flex-col items-center justify-center py-24">
+        <div class="flex flex-wrap">
+          <a class="text-gray-500">
+            <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5"
+              viewBox="0 0 24 24">
+              <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+            </svg>
+          </a>
+          <a class="ml-3 text-gray-500">
+            <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5"
+              viewBox="0 0 24 24">
+              <path
+                d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z">
+              </path>
+            </svg>
+          </a>
+          <a class="ml-3 text-gray-500">
+            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              class="w-5 h-5" viewBox="0 0 24 24">
+              <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+            </svg>
+          </a>
+          <a class="ml-3 text-gray-500">
+            <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+              stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
+              <path stroke="none"
+                d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
+              <circle cx="4" cy="4" r="2" stroke="none"></circle>
+            </svg>
+          </a>
+        </div>
+        <p class="text-sm text-gray-500 mt-2 text-center">
+          © Payrallel 2022
+        </p>
+      </div>
+    </div>
   </footer>
-</div>{# Close .bp-wrapper #}
+</div>
 {% endblock %}
