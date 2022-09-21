@@ -4,9 +4,16 @@
 {% block extraHead %}
 <!-- tailwindcss-->
 <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+  integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
 {% endblock %}
+
 {% block extraBody %}
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 {% endblock %}
+
 
 {% set title = data.piece.title or data.page.title %}
 {% block title %}
@@ -18,15 +25,16 @@
 
 {% block beforeMain %}
 <div>
-  <header class="text-gray-600 bg-gray-100 py-5 px-5">
-    <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+  <header class="text-gray-600 bg-gray-100">
+    <div class="mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
       <a href="/">
         <img class="bp-header__logo" src="/images/payrallel-logo.png" alt="Payrallel logo">
       </a>
       <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
         {# 👇 Referencing `data.home._children` and looping over them. #}
         {% for page in data.home._children %}
-        <a class="mr-5 hover:text-gray-700 title-font text-gray-900" aria-current="page" href="{{ page._url }}">
+        <a class="mr-5 hover:text-gray-700 title-font text-gray-900 no-underline" aria-current="page"
+          href="{{ page._url }}">
           {{ page.title }}
         </a>
         {% endfor %}
@@ -47,9 +55,8 @@
     {% block afterMain %}
   </main>
 
-  <footer class="text-gray-600 bg-gray-100 px-5">
-    <div
-      class="container px-5 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
+  <footer class="text-gray-600 bg-gray-100">
+    <div class="px-5 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
       <div class="w-64 flex-shrink-0 md:mx-0 mx-auto">
         <a href="/" class="">
           <img class="bp-header__logo" src="/images/payrallel-logo.png" alt="Payrallel logo">
@@ -59,22 +66,22 @@
       <div class="flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left">
         <div class="lg:w-1/4 md:w-1/2 w-full px-4">
           <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">
-            <a href="/">
+            <a href="/" class="text-gray-900 no-underline">
               Home
             </a>
           </h2>
           <nav class="list-none mb-10">
             <li>
-              <a class="text-gray-600 hover:text-gray-800">Blog</a>
+              <a class="text-gray-600 hover:text-gray-800 no-underline">Blog</a>
             </li>
             <li>
-              <a class="text-gray-600 hover:text-gray-800">Our Clients</a>
+              <a class="text-gray-600 hover:text-gray-800 no-underline">Our Clients</a>
             </li>
             <li>
-              <a class="text-gray-600 hover:text-gray-800">Merchant Login</a>
+              <a class="text-gray-600 hover:text-gray-800 no-underline">Merchant Login</a>
             </li>
             <li>
-              <a class="text-gray-600 hover:text-gray-800">Developer Resource</a>
+              <a class="text-gray-600 hover:text-gray-800 no-underline">Developer Resource</a>
             </li>
           </nav>
         </div>
@@ -82,16 +89,16 @@
           <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">Solutions</h2>
           <nav class="list-none mb-10">
             <li>
-              <a class="text-gray-600 hover:text-gray-800">For Brick and Mortar</a>
+              <a class="text-gray-600 hover:text-gray-800 no-underline">For Brick and Mortar</a>
             </li>
             <li>
-              <a class="text-gray-600 hover:text-gray-800">For E-commerce</a>
+              <a class="text-gray-600 hover:text-gray-800 no-underline">For E-commerce</a>
             </li>
             <li>
-              <a class="text-gray-600 hover:text-gray-800">For Unattended Retail</a>
+              <a class="text-gray-600 hover:text-gray-800 no-underline">For Unattended Retail</a>
             </li>
             <li>
-              <a class="text-gray-600 hover:text-gray-800">Bespoke solutions</a>
+              <a class="text-gray-600 hover:text-gray-800 no-underline">Bespoke solutions</a>
             </li>
           </nav>
         </div>
@@ -99,16 +106,16 @@
           <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">Industries We Serve</h2>
           <nav class="list-none mb-10">
             <li>
-              <a class="text-gray-600 hover:text-gray-800">Food & Beverages</a>
+              <a class="text-gray-600 hover:text-gray-800 no-underline">Food & Beverages</a>
             </li>
             <li>
-              <a class="text-gray-600 hover:text-gray-800">E-Commerce</a>
+              <a class="text-gray-600 hover:text-gray-800 no-underline">E-Commerce</a>
             </li>
             <li>
-              <a class="text-gray-600 hover:text-gray-800">Brick & Mortar Retail</a>
+              <a class="text-gray-600 hover:text-gray-800 no-underline">Brick & Mortar Retail</a>
             </li>
             <li>
-              <a class="text-gray-600 hover:text-gray-800">Unattended Retail</a>
+              <a class="text-gray-600 hover:text-gray-800 no-underline">Unattended Retail</a>
             </li>
           </nav>
         </div>
@@ -116,16 +123,16 @@
           <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">Why Payrallel</h2>
           <nav class="list-none mb-10">
             <li>
-              <a class="text-gray-600 hover:text-gray-800">Transparent Pricing</a>
+              <a class="text-gray-600 hover:text-gray-800 no-underline">Transparent Pricing</a>
             </li>
             <li>
-              <a class="text-gray-600 hover:text-gray-800">Fuss-free Set-up</a>
+              <a class="text-gray-600 hover:text-gray-800 no-underline">Fuss-free Set-up</a>
             </li>
             <li>
-              <a class="text-gray-600 hover:text-gray-800">Omnichannel Solutions</a>
+              <a class="text-gray-600 hover:text-gray-800 no-underline">Omnichannel Solutions</a>
             </li>
             <li>
-              <a class="text-gray-600 hover:text-gray-800">Converged Convenience</a>
+              <a class="text-gray-600 hover:text-gray-800 no-underline">Converged Convenience</a>
             </li>
           </nav>
         </div>

@@ -1,0 +1,38 @@
+<div class="flex flex-wrap -m-4">
+    <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+        <div class="my-2">
+            <h2 class="text-gray-900 text-lg title-font font-medium mb-3 text-center">For Brick and Mortar Retail</h2>
+        </div>
+        <a class="block relative rounded overflow-hidden" href="/">
+            {% area data.widget, 'imgColumnOne' with {
+                '@apostrophecms/image': {
+                  sizes: 'height: 500px'
+                }
+              } %}
+        </a>
+    </div>
+    <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+        <div class="my-2">
+            <h2 class="text-gray-900 text-lg title-font font-medium mb-3 text-center">For E-Commerce</h2>
+        </div>
+        <a class="block relative rounded overflow-hidden" href="/">
+            {% area data.widget, 'imgColumnTwo' %}
+        </a>
+    </div>
+    <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+        <div class="my-2">
+            <h2 class="text-gray-900 text-lg title-font font-medium mb-3 text-center">For Unattended Retail</h2>
+        </div>
+        <a class="block relative rounded overflow-hidden" href="/">
+            {% area data.widget, 'imgColumnThree' %}
+        </a>
+    </div>
+    <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+        <div class="my-2">
+            <h2 class="text-gray-900 text-lg title-font font-medium mb-3 text-center">Bespoke Solutions</h2>
+        </div>
+        <a class="block relative rounded overflow-hidden" href="/">
+            {% area data.widget, 'imgColumnFour' %}
+        </a>
+    </div>
+</div>
