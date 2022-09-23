@@ -1,27 +1,14 @@
 module.exports = {
   extend: '@apostrophecms/widget-type',
   options: {
-    label: 'Hero Section Images Widget',
+    label: 'Our Clients Section',
   },
   fields: {
     add: {
-      title: {
-        type: 'string',
-        label: 'Title',
-        options: {
-          max: 150
-        }
-      },
-      description: {
-        type: 'string',
-        label: 'Description',
-        options: {
-          max: 150
-        }
-      },
       imgSplideOne: {
         type: 'area',
         label: 'Image 1',
+        className: '',
         options: {
           widgets: {
             '@apostrophecms/image': {}
@@ -33,6 +20,7 @@ module.exports = {
       imgSplideTwo: {
         type: 'area',
         label: 'Image 2',
+        className: '',
         options: {
           widgets: {
             '@apostrophecms/image': {}
@@ -44,6 +32,7 @@ module.exports = {
       imgSplideThree: {
         type: 'area',
         label: 'Image 3',
+        className: '',
         options: {
           widgets: {
             '@apostrophecms/image': {}

@@ -8,26 +8,14 @@
             aria-label="Slide 3"></button>
     </div>
     <div class="carousel-inner">
-        <div class="carousel-item active h-screen">
+        <div class="carousel-item active h-screen bg-cover" style="min-height: 300px;">
             {% area data.widget, 'imgSplideOne' %}
-            <div class="absolute inset-0 flex flex-col justify-center items-center text-white">
-                <h1 class="text-8xl">{{data.widget.title}}</h1>
-                <p class="text-2xl mt-3">{{data.widget.description}}</p>
-            </div>
         </div>
-        <div class="carousel-item h-screen">
+        <div class="carousel-item  h-screen bg-cover" style="min-height: 300px;">
             {% area data.widget, 'imgSplideTwo' %}
-            <div class="absolute inset-0 flex flex-col justify-center items-center text-white">
-                <h1 class="text-8xl">{{data.widget.title}}</h1>
-                <p class="text-2xl mt-3">{{data.widget.description}}</p>
-            </div>
         </div>
-        <div class="carousel-item h-screen">
+        <div class="carousel-item  h-screen bg-cover" style="min-height: 300px;">
             {% area data.widget, 'imgSplideThree' %}
-            <div class="absolute inset-0 flex flex-col justify-center items-center text-white">
-                <h1 class="text-8xl">{{data.widget.title}}</h1>
-                <p class="text-2xl mt-3">{{data.widget.description}}</p>
-            </div>
         </div>
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">

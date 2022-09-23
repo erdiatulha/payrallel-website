@@ -1,14 +1,14 @@
 module.exports = {
   extend: '@apostrophecms/widget-type',
   options: {
-    label: 'Industries Section Widget',
+    label: 'Industries Section',
   },
   fields: {
     add: {
       imgColumnOne: {
         type: 'area',
         label: 'Image',
-        className: '',
+        className: 'column-img',
         options: {
           widgets: {
             '@apostrophecms/image': {}
@@ -20,6 +20,7 @@ module.exports = {
       imgColumnTwo: {
         type: 'area',
         label: 'Image',
+        className: 'column-img',
         options: {
           widgets: {
             '@apostrophecms/image': {}
@@ -31,6 +32,7 @@ module.exports = {
       imgColumnThree: {
         type: 'area',
         label: 'Image',
+        className: 'column-img',
         options: {
           widgets: {
             '@apostrophecms/image': {}
@@ -42,6 +44,7 @@ module.exports = {
       imgColumnFour: {
         type: 'area',
         label: 'Image',
+        className: 'column-img',
         options: {
           widgets: {
             '@apostrophecms/image': {}

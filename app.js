@@ -18,7 +18,9 @@ require('apostrophe')({
     },
     '@apostrophecms/image-widget': {
       options: {
-        className: 'bp-image-widget'
+        className: 'bp-image-widget',
+        className: 'logo-img',
+        className: 'column-img',
       }
     },
     '@apostrophecms/video-widget': {
@@ -31,8 +33,10 @@ require('apostrophe')({
     // The project's first custom page type.
     'default-page': {},
     //widgets of homepage
-    'hero-section-images-widget': {},
+    'carousel-widget': {},
     'solutions-section-widget': {},
     'industries-section-widget': {},
+    'supported-payments-widget': {},
+    'why-payrallel-widget': {}
   }
 });

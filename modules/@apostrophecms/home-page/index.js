@@ -4,14 +4,6 @@ module.exports = {
   },
   fields: {
     add: {
-      main: {
-        type: 'area',
-        options: {
-          widgets: {
-            'hero-section-images': {},
-          }
-        }
-      },
       solutions: {
         type: 'area',
         options: {
@@ -27,7 +19,31 @@ module.exports = {
             'industries-section': {},
           }
         }
-      }
+      },
+      ourClients: {
+        type: 'area',
+        options: {
+          widgets: {
+            'carousel': {},
+          }
+        }
+      },
+      payments: {
+        type: 'area',
+        options: {
+          widgets: {
+            'supported-payments': {},
+          }
+        }
+      },
+      whyPayrallel: {
+        type: 'area',
+        options: {
+          widgets: {
+            'why-payrallel': {},
+          }
+        }
+      },
     },
     group: {
       basics: {

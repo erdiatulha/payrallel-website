@@ -1,14 +1,14 @@
 module.exports = {
   extend: '@apostrophecms/widget-type',
   options: {
-    label: 'Solutions Section',
+    label: 'Supported Payments',
   },
   fields: {
     add: {
-      imgColumnOne: {
+      logoOne: {
         type: 'area',
         label: 'Image',
-        className: 'column-img',
+        className: "column-img",
         options: {
           widgets: {
             '@apostrophecms/image': {}
@@ -17,10 +17,10 @@ module.exports = {
         },
         required: true
       },
-      imgColumnTwo: {
+      logoTwo: {
         type: 'area',
         label: 'Image',
-        className: 'column-img',
+        className: "column-img",
         options: {
           widgets: {
             '@apostrophecms/image': {}
@@ -29,10 +29,10 @@ module.exports = {
         },
         required: true
       },
-      imgColumnThree: {
+      logoThree: {
         type: 'area',
         label: 'Image',
-        className: 'column-img',
+        className: "column-img",
         options: {
           widgets: {
             '@apostrophecms/image': {}
@@ -41,10 +41,22 @@ module.exports = {
         },
         required: true
       },
-      imgColumnFour: {
+      logoFour: {
         type: 'area',
         label: 'Image',
-        className: 'column-img',
+        className: "column-img",
+        options: {
+          widgets: {
+            '@apostrophecms/image': {}
+          },
+          limit: 1,
+        },
+        required: true
+      },
+      logoFive: {
+        type: 'area',
+        label: 'Image',
+        className: "column-img",
         options: {
           widgets: {
             '@apostrophecms/image': {}

@@ -5,3 +5,15 @@
 .bp-image-widget {
   max-width: 100%;
 }
+.column-img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+// .carousel-img{
+//   width: 100%;
+//   display: block;
+//   object-fit: cover;
+//   height: 100vh;
+// }
