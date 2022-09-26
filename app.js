@@ -28,6 +28,7 @@ require('apostrophe')({
         className: 'bp-video-widget'
       }
     },
+    '@apostrophecms/html': {},
     // `asset` supports the project's webpack build for client-side assets.
     asset: {},
     //pieces

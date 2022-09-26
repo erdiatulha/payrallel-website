@@ -6,18 +6,38 @@ module.exports = {
   },
   fields: {
     add: {
+      coverImage: {
+        type: 'attachment',
+        label: 'Blog Cover Image',
+        className: 'lg:h-48 md:h-36 w-full object-cover object-center',
+        options: {
+          widgets: {
+            '@apostrophecms/image': {}
+          },
+          limit: 1,
+        },
+        required: true
+      },
+      blogDate: {
+        label: 'Date',
+        type: 'dateAndTime'
+      },
+      description: {
+        label: 'Description',
+        type: 'string'
+      },
       authorName: {
-        label: 'Author name',
+        label: 'Author Name',
         type: 'string'
       },
       body: {
-        label: 'Blog post body',
+        label: 'Blog Post Content',
         // The `area` field type supports dynamic content widgets. It is
         // covered in the "Areas and widgets" guide section.
         type: 'area',
         options: {
           widgets: {
-            '@apostrophecms/rich-text': {}
+            '@apostrophecms/html': {}
           }
         }
       },
@@ -25,7 +45,7 @@ module.exports = {
     group: {
       blogFields: {
         label: 'Blog fields',
-        fields: ['title', 'authorName', 'body']
+        fields: ['title', 'blogDate', 'description', 'coverImage', 'authorName', 'body']
       }
     }
   }
