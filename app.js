@@ -30,8 +30,11 @@ require('apostrophe')({
     },
     // `asset` supports the project's webpack build for client-side assets.
     asset: {},
+    //pieces
+    'blog-post': {},
     // The project's first custom page type.
     'default-page': {},
+    'blog-post-page': {},
     //widgets of homepage
     'carousel-widget': {},
     'solutions-section-widget': {},
