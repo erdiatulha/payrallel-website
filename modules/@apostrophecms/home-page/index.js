@@ -4,17 +4,6 @@ module.exports = {
   },
   fields: {
     add: {
-      heroImage: {
-        type: 'attachment',
-        label: 'Hero Image',
-        options: {
-          widgets: {
-            '@apostrophecms/image': {}
-          },
-          limit: 1,
-        },
-        required: true
-      },
       solutions: {
         type: 'area',
         options: {
@@ -57,12 +46,9 @@ module.exports = {
       },
     },
     group: {
-      basics: {
-        label: 'Basics',
-        fields: [
-          'title',
-          'main'
-        ]
+      homeFields: {
+        label: 'Homepage Section fields',
+        fields: ['solutions', 'industries', 'ourClients', 'payments', 'whyPayrallel']
       }
     }
   }

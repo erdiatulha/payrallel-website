@@ -23,9 +23,7 @@ require("apostrophe")({
         },
         "@apostrophecms/image-widget": {
             options: {
-                className: "bp-image-widget",
-                className: "logo-img",
-                className: "column-img",
+                className: 'content-image'
             },
         },
         "@apostrophecms/video-widget": {
@@ -33,7 +31,6 @@ require("apostrophe")({
                 className: "bp-video-widget",
             },
         },
-        "@apostrophecms/html": {},
         // `asset` supports the project's webpack build for client-side assets.
         asset: {},
         //pieces
