@@ -9,7 +9,6 @@ module.exports = {
       coverImage: {
         type: 'attachment',
         label: 'Blog Cover Image',
-        className: 'lg:h-48 md:h-36 w-full object-cover object-center',
         options: {
           widgets: {
             '@apostrophecms/image': {}

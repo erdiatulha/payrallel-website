@@ -5,54 +5,30 @@ module.exports = {
   },
   fields: {
     add: {
-      imgColumnOne: {
-        type: 'area',
-        label: 'Image',
-        className: 'column-img',
-        options: {
-          widgets: {
-            '@apostrophecms/image': {}
-          },
-          limit: 1,
-        },
-        required: true
-      },
-      imgColumnTwo: {
-        type: 'area',
-        label: 'Image',
-        className: 'column-img',
-        options: {
-          widgets: {
-            '@apostrophecms/image': {}
-          },
-          limit: 1,
-        },
-        required: true
-      },
-      imgColumnThree: {
-        type: 'area',
-        label: 'Image',
-        className: 'column-img',
-        options: {
-          widgets: {
-            '@apostrophecms/image': {}
-          },
-          limit: 1,
-        },
-        required: true
-      },
-      imgColumnFour: {
-        type: 'area',
-        label: 'Image',
-        className: 'column-img',
-        options: {
-          widgets: {
-            '@apostrophecms/image': {}
-          },
-          limit: 1,
-        },
-        required: true
-      },
+      industries: {
+        label: 'Industries Section',
+        type: 'array',
+        titleField: 'Industries We Serve',
+        fields: {
+          add: {
+            category: {
+              type: 'string',
+              label: 'Category of Industries'
+            },
+            image: {
+              type: 'attachment',
+              label: 'Image',
+              options: {
+                widgets: {
+                  '@apostrophecms/image': {}
+                },
+                limit: 1,
+              },
+              required: true
+            }
+          }
+        }
+      }
     }
   }
 };
