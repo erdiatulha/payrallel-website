@@ -32,7 +32,7 @@ module.exports = {
       imgSplideThree: {
         type: 'area',
         label: 'Image 3',
-        className: '',
+        className: 'bp-image-widget',
         options: {
           widgets: {
             '@apostrophecms/image': {}

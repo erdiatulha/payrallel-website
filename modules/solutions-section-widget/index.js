@@ -18,6 +18,7 @@ module.exports = {
             image: {
               type: 'attachment',
               label: 'Image',
+              className: 'bp-image',
               options: {
                 widgets: {
                   '@apostrophecms/image': {}

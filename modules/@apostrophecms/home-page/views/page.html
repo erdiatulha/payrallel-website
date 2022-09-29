@@ -8,59 +8,83 @@
 {% block main %}
 <section class="home-page">
   <!-- hero section -->
-  <section class="w-full bg-cover h-screen bg-no-repeat flex justify-center"
-    style="background-image: url('/images/hero-image.png');">
-    <div class="flex flex-col items-center justify-center text-white px-9">
-      <h1 class="sm:text-8xl text-7xl ">Payrallel</h1>
-      <p class="mt-3 sm:text-2xl text-xl">A universe of payments unlocked.</p>
-      <a href="#solutions" class="text-white no-underline">
-        <button class="text-white bg-teal border-0 py-2 px-8 focus:outline-none  rounded text-sm h-10 mt-3">
-          Get Started
-        </button>
+  <header class="w-full ">
+    <nav class="navbar navbar-expand-lg navbar-light py-4 px-5 w-full">
+      <a class="navbar-brand" href="/">
+        <img class="bp-header__logo" src="/images/payrallel-logo.png" alt="Payrallel logo">
       </a>
-    </div>
-  </section>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="navbar-nav ms-auto">
+          <li class="nav-item">
+            {# 👇 Referencing `data.home._children` and looping over them. #}
+            {% for page in data.home._children %}
+            <a class="mr-5 hover:text-gray-700 title-font text-color no-underline font-bold" aria-current="page"
+              href="{{ page._url }}">
+              {{ page.title }}
+            </a>
+            {% endfor %}
+          </li>
+        </div>
+      </div>
+    </nav>
+
+    <div class="w-full bg-cover h-screen bg-no-repeat flex justify-center"
+      style="background-image: url('/images/hero-image-3.jpg');">
+      <div class="flex flex-col items-center justify-center text-color px-9">
+        <h1 class="sm:text-8xl text-7xl ">Payrallel</h1>
+        <p class="mt-3 sm:text-2xl text-xl">A universe of payments unlocked.</p>
+        <a href="#solutions" class="text-white no-underline">
+          <button class="text-white bg-teal border-0 py-2 px-8 focus:outline-none  rounded text-sm h-10 mt-3">
+            Get Started
+          </button>
+        </a>
+      </div>
+  </header>
 
   <!-- Solutions section -->
-  <h1 id="solutions"
-    class="sm:text-3xl text-2xl font-medium title-font mb-4 text-color main-bg-color text-center py-10">Solutions
+  <h1 id="solutions" class="sm:text-3xl text-2xl font-medium title-font mb-4 text-color section-bg text-center py-10">
+    Solutions
   </h1>
   <section class="solution-section">
-    <div class="px-5 pb-16 pt-8 mx-auto">
+    <div class="px-5 pb-24 pt-12 mx-auto">
       {% area data.page, 'solutions' %}
     </div>
   </section>
 
   <!-- Industries we serve section -->
-  <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-color main-bg-color text-center py-10">Industries
+  <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-color section-bg text-center py-10">Industries
     we
     serve</h1>
   <section class="industries-section">
-    <div class="px-5 pb-16 pt-8 mx-auto">
+    <div class="px-5 pb-12 pt-24 mx-auto">
       {% area data.page, 'industries' %}
     </div>
   </section>
 
   <!-- Our Clients section -->
-  <h1 class="sm:text-3xl text-2xl font-medium title-font text-color main-bg-color text-center py-10 mb-0">Our Clients
+  <h1 class="sm:text-3xl text-2xl font-medium title-font text-color section-bg text-center py-10 mb-0">Our Clients
   </h1>
   {% area data.page, 'ourClients' %}
 
   <!-- Supported payments type section -->
-  <h1 class="sm:text-3xl text-2xl font-medium title-font  mb-4 text-color main-bg-color text-center py-10 mb-0">
+  <h1 class="sm:text-3xl text-2xl font-medium title-font  mb-4 text-color section-bg text-center py-10 mb-0">
     Supported
     payment types
   </h1>
   {% area data.page, 'payments' %}
 
   <!-- My payrallel section -->
-  <h1 class="sm:text-3xl text-2xl font-medium title-font  mb-4 text-color main-bg-color text-center py-10 mb-0"> Why
+  <h1 class="sm:text-3xl text-2xl font-medium title-font  mb-4 text-color section-bg text-center py-10 mb-0"> Why
     Payrallel?
   </h1>
   {% area data.page, 'whyPayrallel' %}
 
   <!-- Reach out to us section -->
-  <h1 class="sm:text-3xl text-2xl font-medium title-font text-color main-bg-color text-center py-10 mb-0"> Reach out
+  <h1 class="sm:text-3xl text-2xl font-medium title-font text-color section-bg text-center py-10 mb-0"> Reach out
     to us
   </h1>
   <section class="text-gray-600 relative">

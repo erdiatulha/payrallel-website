@@ -23,7 +23,8 @@ require("apostrophe")({
         },
         "@apostrophecms/image-widget": {
             options: {
-                className: 'content-image'
+                className: 'content-image',
+                className: 'bp-image-widget',
             },
         },
         "@apostrophecms/video-widget": {
@@ -44,5 +45,6 @@ require("apostrophe")({
         "industries-section-widget": {},
         "supported-payments-widget": {},
         "why-payrallel-widget": {},
+        'columns-widget': {},
     },
 });

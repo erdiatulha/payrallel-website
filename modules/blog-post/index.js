@@ -90,7 +90,8 @@ module.exports = {
                 className: 'content-image'
               }
             },
-            '@apostrophecms/video': {}
+            '@apostrophecms/video': {},
+            'columns': {},
           }
         }
       },

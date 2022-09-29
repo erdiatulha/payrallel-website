@@ -1,0 +1,39 @@
+<section>
+    <!-- single column ui -->
+    <div class="mx-auto flex flex-col flex-wrap pt-8">
+        {% for single in data.widget.singleColumn %}
+        {% set srcset = apos.image.srcset(single.image) %}
+        <div class="overflow-hidden">
+            <img alt="content" class="object-cover object-center h-full w-full" srcset="{{ srcset }}"
+                src="{{ apos.attachment.url(single.image) }}" style="height: 50vh">
+        </div>
+        {% endfor %}
+    </div>
+
+    <!-- two columns ui -->
+    <div class="pt-8 flex flex-wrap -mx-4 -mb-10">
+        {% for twoColumn in data.widget.twoColumns %}
+        {% set srcset = apos.image.srcset(twoColumn.image) %}
+        <div class="sm:w-1/2 mb-10 px-4">
+            <div class="h-64 overflow-hidden">
+                <img alt="content" class="object-cover object-center h-full w-full" srcset="{{ srcset }}"
+                    src="{{ apos.attachment.url(twoColumn.image) }}" style="height: 50vh">
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+    <!-- three columns ui -->
+    <div class="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4 pt-8">
+        {% for threeColumn in data.widget.threeColumns %}
+        {% set srcset = apos.image.srcset(threeColumn.image) %}
+        <div class="p-4 md:w-1/3 sm:mb-0 mb-6">
+            <div class="h-64 overflow-hidden">
+                <img alt="content" class="object-cover object-center h-full w-full" srcset="{{ srcset }}"
+                    src="{{ apos.attachment.url(threeColumn.image) }}" style="height: 50vh">
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+</section>
