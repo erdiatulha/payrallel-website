@@ -13,13 +13,11 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <div class="navbar-nav ms-auto">
             <li class="nav-item">
-                {# 👇 Referencing `data.home._children` and looping over them. #}
-                {% for page in data.home._children %}
-                <a class="mr-5 hover:text-gray-700 title-font text-color no-underline font-bold" aria-current="page"
-                    href="{{ page._url }}">
-                    {{ page.title }}
-                </a>
-                {% endfor %}
+                <a class="mr-5 title-font text-color no-underline font-bold" aria-current="page" href="/">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="mr-5 title-font text-color no-underline font-bold active" href="/blog-post">Blog
+                    Post</a>
             </li>
         </div>
     </div>
@@ -30,9 +28,6 @@
     <section class="w-full flex flex-col items-center px-3">
 
         <article class="flex flex-col my-4">
-            <h1 class="text-3xl font-bold">{{data.piece.title}}</h1>
-            <p class="text-base">By {{data.piece.authorName}}, Published on
-                {{data.piece.blogDate | date("DD MMMM YYYY")}}</p>
             <!-- Article Image -->
             <div class="mx-auto flex flex-col flex-wrap pt-8">
                 <div class="overflow-hidden">
@@ -40,9 +35,13 @@
                             class="hover:opacity-75 object-cover object-center h-full w-full" srcset="{{ srcset }}"
                             src="{{ apos.attachment.url(data.piece.coverImage) }}" alt="blog" style="height: 50vh"></a>
                 </div>
+                <p class="text-base">By {{data.piece.authorName}}, Published on
+                    {{data.piece.blogDate | date("DD MMMM YYYY")}}</p>
+                <h1 class="text-5]-xl font-bold">{{data.piece.title}}</h1>
                 <div class="bg-white flex flex-col justify-start pt-3">
                     {% area data.piece, 'body' %}
                 </div>
+            </div>
         </article>
     </section>
 

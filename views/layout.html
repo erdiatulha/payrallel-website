@@ -24,6 +24,27 @@
     }
   });
 </script>
+<script>
+  // const activePage = window.location.pathname;
+  // console.log(activePage)
+  // const navLinks = document.querySelectorAll('nav a').forEach(link => {
+  //   console.log(link.href)
+  //   if (link.href.includes(`${activePage}`)) {
+  //     console.log(`${activePage}`)
+  //     link.classList.add('active')
+  //   } else {
+  //     link.classList.remove('active')
+  //   }
+  // })
+  const currentLocation = location.href;
+  const menuItem = document.querySelectorAll('nav a')
+  const menuLength = menuItem.length;
+  for (var i = 0; i < menuLength; i++) {
+    if (menuItem[i].href === currentLocation) {
+      menuItem[i].className = "active";
+    }
+  }
+</script>
 {% endblock %}
 
 

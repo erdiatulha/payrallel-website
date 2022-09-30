@@ -29,3 +29,20 @@ a{
     width: 100%;
     height: 50vh;
 }
+li a:hover{
+    color: #147D94;
+}
+li a.active {
+    font-weight: bold;
+    color:white;
+    background-color: #147D94;
+    padding:.5rem 1.5rem; 
+    text-decoration: none;
+    margin-right: 20px;
+    border-radius: 5px;
+}
+li a.active:hover{
+    color:white;
+    background-color: #7FBCC7;
+    text-decoration: none;
+}
