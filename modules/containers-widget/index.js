@@ -1,43 +1,18 @@
 module.exports = {
-  extend: '@apostrophecms/piece-type',
+  extend: '@apostrophecms/widget-type',
   options: {
-    label: 'Blog Post',
-    // Additionally add a `pluralLabel` option if needed.
+    label: 'Containers',
   },
   fields: {
     add: {
-      coverImage: {
-        type: 'attachment',
-        label: 'Blog Cover Image',
-        options: {
-          widgets: {
-            '@apostrophecms/image': {}
-          },
-          limit: 1,
-        },
-        required: true
-      },
-      blogDate: {
-        label: 'Date',
-        type: 'dateAndTime'
-      },
-      description: {
-        label: 'Description',
-        type: 'string'
-      },
-      authorName: {
-        label: 'Author Name',
-        type: 'string'
-      },
-      body: {
-        label: 'Blog Post Content',
-        // The `area` field type supports dynamic content widgets. It is
-        // covered in the "Areas and widgets" guide section.
+      content: {
         type: 'area',
+        label: 'Content',
         options: {
           widgets: {
-            '@apostrophecms/rich-text': {
-              // 👇 Toolbar configuration
+            'columns': {},
+            "containers": {},
+            "@apostrophecms/rich-text": {
               toolbar: [
                 'styles',
                 'bold',
@@ -85,22 +60,34 @@ module.exports = {
                 }
               ]
             },
-            '@apostrophecms/image': {
-              options: {
-                className: 'content-image'
-              }
-            },
-            '@apostrophecms/video': {},
-            'columns': {},
-            'containers': {},
+            "@apostrophecms/image": {},
           }
         }
       },
-    },
-    group: {
-      blogFields: {
-        label: 'Blog fields',
-        fields: ['title', 'blogDate', 'description', 'coverImage', 'authorName', 'body']
+      backgroundColor: {
+        type: 'color',
+        help: 'Background color of the container',
+        label: 'Background Color',
+        options: {
+          format: 'rgb'
+        }
+      },
+      borderColor: {
+        type: 'color',
+        help: 'Border color of the container',
+        label: 'Border Color',
+        options: {
+          format: 'rgb'
+        }
+      },
+      addBorderRadius: {
+        label: 'Border Radius',
+        help: 'Adds a 20px border radius',
+        type: 'boolean',
+        toggle: {
+          true: 'Yes',
+          false: 'No'
+        }
       }
     }
   }

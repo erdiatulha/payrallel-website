@@ -1,7 +1,7 @@
 module.exports = {
   extend: '@apostrophecms/widget-type',
   options: {
-    label: 'Columns Widget',
+    label: 'Columns',
   },
   fields: {
     add: {
@@ -37,7 +37,7 @@ module.exports = {
                 widgets: {
                   '@apostrophecms/image': {}
                 },
-                limit: 1,
+                max: 1,
               },
               required: true,
             }
@@ -61,7 +61,7 @@ module.exports = {
                 widgets: {
                   '@apostrophecms/image': {}
                 },
-                limit: 1,
+                max: 2,
               },
               required: true,
             }
@@ -85,7 +85,7 @@ module.exports = {
                 widgets: {
                   '@apostrophecms/image': {}
                 },
-                limit: 1,
+                max: 3,
               },
               required: true
             }

@@ -46,5 +46,6 @@ require("apostrophe")({
         "supported-payments-widget": {},
         "why-payrallel-widget": {},
         'columns-widget': {},
+        "containers-widget": {},
     },
 });

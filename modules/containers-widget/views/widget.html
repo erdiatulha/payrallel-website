@@ -1,0 +1,6 @@
+<section
+    style="background-color: {{data.widget.backgroundColor}}; border: 10px solid {{data.widget.borderColor}}; border-radius: {% if data.widget.addBorderRadius == true %}20px{% endif %}">
+    <div class="mx-auto flex flex-col px-5">
+        {% area data.widget, 'content' %}
+    </div>
+</section>
