@@ -3,7 +3,7 @@
 
 {% block main %}
 <section class="text-gray-600 body-font">
-  <nav class="navbar navbar-expand-lg navbar-light py-4 px-5 w-full fixed-top">
+  <nav class="navbar-expand-lg py-4 px-5 w-full navs-bar">
     <a class="navbar-brand" href="/">
       <img class="bp-header__logo" src="/images/payrallel-logo.png" alt="Payrallel logo">
     </a>
@@ -23,7 +23,7 @@
       </div>
     </div>
   </nav>
-  <div class="container px-5 py-24 mx-auto">
+  <div class="container px-5 pb-24 pt-36 mx-auto">
     <div class="flex flex-wrap -m-4">
       {% for blog in data.pieces %}
       {% set srcset = apos.image.srcset(blog.coverImage) %}
@@ -38,7 +38,9 @@
                 {{blog.createdAt | date("DD MMMM YYYY")}}</h2>
             </div>
 
-            <h1 class="title-font text-lg font-medium text-gray-900 mb-3">{{ blog.title }}</h1>
+            <a href="{{ blog._url }}" class="no-underline">
+              <h1 class="title-font text-lg font-medium text-gray-900 mb-3">{{ blog.title }}</h1>
+            </a>
             <p class="leading-relaxed mb-3">
               {{blog.description}}
             </p>
