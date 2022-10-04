@@ -57,7 +57,7 @@ li a.active:hover{
     background-color: #7FBCC7;
     text-decoration: none;
 }
-.navs{
+.navbar-home{
     position: absolute;
     top:0;
     left:0;
@@ -67,6 +67,23 @@ li a.active:hover{
     min-height: 80px;
     background-color: transparent;
     justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+.navbar-page{
+    position: absolute;
+    top:0;
+    left:0;
+    z-index: 9;
+    display: flex;
+    align-items: center;
+    min-height: 80px;
+    background-color: #EFF0ED;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
 }
 .navbar-toggler-icon{
     background-color: transparent;
