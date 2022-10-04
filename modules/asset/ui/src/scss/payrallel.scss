@@ -1,8 +1,16 @@
-body {
+html, body {
     font-family: 'Rubik', sans-serif !important;
+    margin:0;
+    padding:0;
+    overflow-x:hidden;
+    width: 100%;
+    height: 100%;
 }
-a{
-    text-decoration: none;
+.container, .container-fluid {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 .bp-header__logo {
     display: block;
@@ -58,16 +66,10 @@ li a.active:hover{
     align-items: center;
     min-height: 80px;
     background-color: transparent;
+    justify-content: space-between;
 }
-.navs-bar{
-    position: absolute;
-    top:0;
-    left:0;
-    z-index: 9;
-    display: flex;
-    align-items: center;
-    min-height: 80px;
-    background-color: #EFF0ED;
+.navbar-toggler-icon{
+    background-color: transparent;
 }
 .nav-scroll{
     background: #fff;
@@ -83,4 +85,30 @@ li a.active:hover{
     transition: transform .5s, -webkit-transform .5s;
     -webkit-transform: translateY(100px);
     transform: translateY(100px);
+}
+.section-head h6:before, .section-head h6:after {
+    content: '';
+    width: 40px;
+    height: 1px;
+    background-color: #2AAFC0;
+    position: absolute;
+    bottom: 6px;
+    display:block;
+    z-index:-2;
+}
+.section-head h6 {
+    letter-spacing: 2px;
+    display: inline-block;
+    padding: 0 15px;
+    position: relative;
+    max-width:600px;
+}
+.section-head h6:before{
+    left: -35px;
+}
+.section-head h6:after{
+    right: -35px;
+}
+span{
+    background-color: #fff;
 }
