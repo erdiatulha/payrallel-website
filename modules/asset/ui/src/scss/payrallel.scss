@@ -3,15 +3,8 @@ html, body {
     margin:0;
     padding:0;
     overflow-x:hidden;
-    // width: 100%;
-    // height: 100%;
 }
-// .container, .container-fluid {
-//     margin-right: auto;
-//     margin-left: auto;
-//     padding-left: 15px;
-//     padding-right: 15px;
-// }
+
 .bp-header__logo {
     display: block;
     width: 120px;
@@ -40,23 +33,49 @@ html, body {
     width: 100%;
     height: 50vh;
 }
-li a:hover{
-    color: #147D94;
-}
+// li a:hover{
+//     color: #147D94;
+//     transition: #147D94 1s;
+//     font-weight: bold;
+// }
+li a{
+    position: relative;
+    display: inline-block;
+    color: #233940;
+    overflow: hidden;
+    background: linear-gradient(to right, #147D94, #147D94 50%, #233940 50%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% 100%;
+    background-position: 100%;
+    transition: background-position 275ms ease;
+    text-decoration: none; // text decorations are clipped in WebKit browsers
+    margin: 15px 10px;
+    &:hover {
+      background-position: 0 100%;
+    }
+  }
 li a.active {
+    position: relative;
+    display: inline-block;
     font-weight: bold;
-    color:white;
-    background-color: #147D94;
-    padding:.5rem 1.5rem; 
-    text-decoration: none;
-    margin-right: 20px;
-    border-radius: 5px;
+    color: #147D94;
+    overflow: hidden;
+    background: linear-gradient(to right, #7FBCC7, #7FBCC7 50%, #147D94 50%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% 100%;
+    background-position: 100%;
+    transition: background-position 275ms ease;
+    text-decoration: none; // text decorations are clipped in WebKit browsers
+    margin: 15px 5px;
+    &:hover {
+      background-position: 0 100%;
+    }
 }
-li a.active:hover{
-    color:white;
-    background-color: #7FBCC7;
-    text-decoration: none;
-}
+
 .navbar-home{
     position: absolute;
     top:0;

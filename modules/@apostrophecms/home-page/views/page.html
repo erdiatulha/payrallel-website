@@ -9,24 +9,25 @@
 <section class="home-page">
   <!-- hero section -->
   <header>
-    <nav class="navbar-home navbar-expand-lg py-4 px-36 w-full navbar-light">
-      <a class="navbar-brand" href="/">
-        <img class="bp-header__logo" src="/images/payrallel-logo.png" alt="Payrallel logo">
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <div class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a class="mr-5 title-font text-color no-underline font-bold active " aria-current="page" href="/">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="mr-5 title-font text-color no-underline font-bold" href="/blog-post">Blog
-              Post</a>
-          </li>
-          <!-- <li class="nav-item">
+    <nav class="navbar-home navbar-expand-lg w-full navbar-light">
+      <div class="container flex items-center">
+        <a class="navbar-brand" href="/">
+          <img class="bp-header__logo" src="/images/payrallel-logo.png" alt="Payrallel logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <div class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="mr-5 title-font text-color no-underline active " aria-current="page" href="/">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="mr-5 title-font text-color no-underline" href="/blog-post">Blog
+                Post</a>
+            </li>
+            <!-- <li class="nav-item">
             {# 👇 Referencing `data.home._children` and looping over them. #}
             {% for item in data.home._children %}
             <a class="mr-5 hover:text-gray-700 title-font text-color no-underline font-bold" aria-current="page"
@@ -35,6 +36,7 @@
             </a>
             {% endfor %}
           </li> -->
+          </div>
         </div>
       </div>
     </nav>
