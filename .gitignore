@@ -2,7 +2,7 @@ package-lock.json
 /locales
 npm-debug.log
 /data
-/public/uploads
+# /public/uploads
 /public/apos-minified
 /data/temp/uploadfs
 node_modules
