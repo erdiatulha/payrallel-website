@@ -8,7 +8,7 @@ module.exports = {
         type: 'area',
         options: {
           widgets: {
-            'solutions-section': {},
+            'four-columns': {},
           }
         }
       },
@@ -16,7 +16,7 @@ module.exports = {
         type: 'area',
         options: {
           widgets: {
-            'industries-section': {},
+            'four-columns': {},
           }
         }
       },

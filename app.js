@@ -21,10 +21,14 @@ require("apostrophe")({
                 className: "bp-rich-text",
             },
         },
+        // "@apostrophecms/image-widget": {
+        //     options: {
+        //         className: 'carousel-images',
+        //     },
+        // },
         "@apostrophecms/image-widget": {
             options: {
-                className: 'content-image',
-                className: 'bp-image-widget',
+                className: 'columns-images',
             },
         },
         "@apostrophecms/video-widget": {
@@ -41,7 +45,7 @@ require("apostrophe")({
         "blog-post-page": {},
         //widgets of homepage
         "carousel-widget": {},
-        "solutions-section-widget": {},
+        "four-columns-widget": {},
         "industries-section-widget": {},
         "supported-payments-widget": {},
         "why-payrallel-widget": {},

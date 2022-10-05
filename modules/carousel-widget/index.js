@@ -8,7 +8,7 @@ module.exports = {
       imgSplideOne: {
         type: 'area',
         label: 'Image 1',
-        className: '',
+        className: 'carousel-images',
         options: {
           widgets: {
             '@apostrophecms/image': {}
@@ -20,7 +20,7 @@ module.exports = {
       imgSplideTwo: {
         type: 'area',
         label: 'Image 2',
-        className: '',
+        className: 'carousel-images',
         options: {
           widgets: {
             '@apostrophecms/image': {}
@@ -32,7 +32,7 @@ module.exports = {
       imgSplideThree: {
         type: 'area',
         label: 'Image 3',
-        className: 'bp-image-widget',
+        className: 'carousel-images',
         options: {
           widgets: {
             '@apostrophecms/image': {}

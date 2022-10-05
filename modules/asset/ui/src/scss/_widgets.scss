@@ -1,7 +1,12 @@
-.bp-video-widget {
+.carousel-images {
   width: 100%;
 }
 
-.bp-image-widget {
+.columns-images {
   max-width: 100%;
+  height: 100%;
+  object-position: center;
+  object-fit: cover;
+  display: block;
+  height: 25vh
 }
