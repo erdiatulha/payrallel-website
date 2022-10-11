@@ -1,10 +1,15 @@
 html, body {
-    font-family: 'Rubik', sans-serif !important;
+    font-family: 'Quicksand', sans-serif !important;
     margin:0;
     padding:0;
     overflow-x:hidden;
 }
-
+.bg-gray{
+    background-color: #EEECEF;
+}
+.bg-navy{
+    background-color: #020E1C;
+}
 .bp-header__logo {
     display: block;
     width: 120px;
@@ -27,7 +32,10 @@ html, body {
     background-color: #EFF0ED;
 }
 .text-color{
-    color: #233940;
+    color: #147D94;
+}
+.text-color-2{
+    color: #3BA7EF;
 }
 .content-image{
     width: 100%;
@@ -36,9 +44,9 @@ html, body {
 li a{
     position: relative;
     display: inline-block;
-    color: #233940;
+    color: white;
     overflow: hidden;
-    background: linear-gradient(to right, #147D94, #147D94 50%, #233940 50%);
+    background: linear-gradient(to right, #147D94, #147D94 50%, white 50%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -49,6 +57,7 @@ li a{
     &:hover {
       background-position: 0 100%;
     }
+    margin-right:24px;
   }
 li a.active {
     position: relative;
@@ -67,6 +76,7 @@ li a.active {
     &:hover {
       background-position: 0 100%;
     }
+    margin-right:24px;
 }
 
 .navbar-home{
@@ -101,7 +111,7 @@ li a.active {
     background-color: transparent;
 }
 .scroll-nav{
-    background: #fff;
+    background: #020E1C;
     border-bottom: 1px solid rgba(12, 12, 12, 0.04);
     padding: 0;
     position: fixed;
@@ -121,9 +131,9 @@ li a.active {
     height: 1px;
     background-color: #2AAFC0;
     position: absolute;
-    bottom: 6px;
+    top: 13px;
     display:block;
-    z-index:-2;
+    z-index: 1;
 }
 .section-head h6 {
     letter-spacing: 2px;
@@ -138,6 +148,9 @@ li a.active {
 .section-head h6:after{
     right: -35px;
 }
-.section-head h6 span{
-    background-color: #fff;
+.gray{
+    background-color: #EEECEF;
+}
+.navy{
+    background-color: #020E1C;
 }

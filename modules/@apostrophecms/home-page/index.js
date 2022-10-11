@@ -16,7 +16,7 @@ module.exports = {
         type: 'area',
         options: {
           widgets: {
-            'four-columns': {},
+            'industries-section': {},
           }
         }
       },
