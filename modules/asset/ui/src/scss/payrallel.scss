@@ -23,7 +23,10 @@ html, body {
     background-color: #7FBCC7;
 }
 .border-teal{
-    border-color: #147D94;
+    border: 1px solid #147D94;
+}
+.border-footer{
+    border-color: #0E243B;
 }
 .section-bg{
     background-color: #F1F2F4;
@@ -110,9 +113,7 @@ li a.active {
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
 }
-.navbar-toggler-icon{
-    background-color: transparent;
-}
+
 .scroll-nav{
     background: #020E1C;
     border-bottom: 1px solid rgba(12, 12, 12, 0.04);
@@ -130,8 +131,8 @@ li a.active {
 }
 .section-head h6::before, .section-head h6::after {
     content: '';
-    width: 40px;
-    height: 1px;
+    width: 33px;
+    height: 1.5px;
     background-color: #2AAFC0;
     position: absolute;
     top: 13px;
@@ -179,4 +180,14 @@ li a.active {
 }
 .tabs_content.is-active{
     display: block;
+}
+.carousel-captions{
+    position: absolute;
+    right: 15%;
+    left: 15%;
+    bottom:45%;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+    color: #fff;
+    text-align: center;
 }
