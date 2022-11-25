@@ -3,6 +3,7 @@ module.exports = {
     extend: '@apostrophecms/piece-page-type',
     options: {
         label: 'Blog Post Page',
-        pieceModuleName: 'blog-post'
+        pieceModuleName: 'blog-post',
+        perPage: 6,
     }
 };
