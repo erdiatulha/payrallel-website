@@ -47,7 +47,7 @@ html, body {
     width: 100%;
     height: 50vh;
 }
-li a{
+.nav-item a{
     position: relative;
     display: inline-block;
     color: white;
@@ -60,10 +60,10 @@ li a{
     background-position: 100%;
     transition: background-position 275ms ease;
     text-decoration: none; // text decorations are clipped in WebKit browsers
+    margin-right:24px;
     &:hover {
       background-position: 0 100%;
     }
-    margin-right:24px;
 }
 .hover-color{
     position: relative;
@@ -99,7 +99,8 @@ li a{
       background-position: 0 100%;
     }
 }
-li a.active {
+
+.nav-item a.active {
     position: relative;
     display: inline-block;
     font-weight: bold;
@@ -113,10 +114,10 @@ li a.active {
     background-position: 100%;
     transition: background-position 275ms ease;
     text-decoration: none; // text decorations are clipped in WebKit browsers
+    margin-right:24px;
     &:hover {
       background-position: 0 100%;
     }
-    margin-right:24px;
 }
 
 .navbar-home{
@@ -265,4 +266,41 @@ li a.active {
     -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
     overflow: hidden;
+}
+.zoom-in{
+    transform: scale(1);
+    transition: 0.3s ease-in-out;
+    &:hover {
+        transform: scale(1.5);
+    }
+}
+.breadcrumb-item a{
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    position: relative;
+    display: inline-block;
+    color: #147D94;
+    overflow: hidden;
+    background: linear-gradient(to right, #7FBCC7, #7FBCC7 50%, #147D94 50%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% 100%;
+    background-position: 100%;
+    transition: background-position 275ms ease;
+    text-decoration: none; // text decorations are clipped in WebKit browsers
+    &:hover {
+      background-position: 0 100%;
+    }
+}
+.breadcrumb .breadcrumb-item.active{
+    color: #147D94;
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.breadcrumb .breadcrumb-item+.breadcrumb-item::before{
+    color: #147D94;
+    font-size: 20px;
 }
