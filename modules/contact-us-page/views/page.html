@@ -1,0 +1,21 @@
+{#
+    This is an example home page template. It inherits and extends a layout template
+    that lives in the top-level views/ folder for convenience
+  #}
+
+{% extends "layout.html" %}
+
+{% block main %}
+<div class="w-full bg-cover h-96 bg-no-repeat flex justify-center"
+  style="background-image: url('/images/hero-image.jpg');">
+  <div class="flex flex-col items-center justify-center px-9 text-center">
+    <h1 class="sm:text-5xl text-5xl text-white uppercase font-light tracking-widest">Contact Us.</h1>
+    <!-- <p class="mt-3 sm:text-3xl text-3xl text-color ">A Universe of Payments Unlocked.</p> -->
+  </div>
+</div>
+<section class="gray ">
+  <div class="container mx-auto flex flex-wrap px-5 pb-24 pt-28 mx-auto items-center justify-center">
+    {% area data.page, 'contacts' %}
+  </div>
+</section>
+{% endblock %}

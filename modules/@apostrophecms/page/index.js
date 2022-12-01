@@ -15,7 +15,19 @@ module.exports = {
       {
         name: 'blog-post-page',
         label: 'Blog Post'
-      }
+      },
+      {
+        name: 'our-solutions-page',
+        label: 'Our Solutions'
+      },
+      {
+        name: 'industries-page',
+        label: 'Industries We Serve'
+      },
+      {
+        name: 'contact-us-page',
+        label: 'Contact Us'
+      },
     ]
   }
 };

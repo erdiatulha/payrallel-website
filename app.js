@@ -40,9 +40,14 @@ require("apostrophe")({
         asset: {},
         //pieces
         "blog-post": {},
+        "our-solutions": {},
+        "industries": {},
         // The project's first custom page type.
         "default-page": {},
         "blog-post-page": {},
+        "our-solutions-page": {},
+        "industries-page": {},
+        "contact-us-page": {},
         //widgets of homepage
         "carousel-widget": {},
         "four-columns-widget": {},
@@ -51,5 +56,6 @@ require("apostrophe")({
         "why-payrallel-widget": {},
         'columns-widget': {},
         "containers-widget": {},
+        "contact-us-widget": {},
     },
 });
