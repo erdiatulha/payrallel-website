@@ -11,9 +11,13 @@ module.exports = {
         titleField: 'Industries We Serve',
         fields: {
           add: {
-            category: {
+            title: {
               type: 'string',
-              label: 'Category of Industries'
+              label: 'Title'
+            },
+            shortDescription: {
+              type: 'string',
+              label: 'Short Description'
             },
             image: {
               type: 'attachment',
@@ -25,6 +29,10 @@ module.exports = {
                 limit: 1,
               },
               required: true
+            },
+            url: {
+              label: 'Industries Url',
+              type: 'url'
             }
           }
         }

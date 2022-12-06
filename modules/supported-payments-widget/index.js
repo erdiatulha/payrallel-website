@@ -11,14 +11,14 @@ module.exports = {
         titleField: 'Supported Payments',
         fields: {
           add: {
-            category: {
+            title: {
               type: 'string',
-              label: 'Category of Payments'
+              label: 'tTitle'
             },
             logoImages: {
               type: 'array',
               label: 'Logo Images',
-              titleField: 'Logo Images Row',
+              titleField: 'Logo Images',
               fields: {
                 add: {
                   image: {

@@ -49,13 +49,13 @@ require("apostrophe")({
         "industries-page": {},
         "contact-us-page": {},
         //widgets of homepage
-        "carousel-widget": {},
+        "hero-section-widget": {},
         "four-columns-widget": {},
         "industries-section-widget": {},
         "supported-payments-widget": {},
-        "why-payrallel-widget": {},
         'columns-widget': {},
         "containers-widget": {},
         "contact-us-widget": {},
+        "our-clients-widget": {},
     },
 });

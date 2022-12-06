@@ -1,113 +1,24 @@
+{% for payment in data.widget.payments %}
 <div class="-my-8 divide-y-2 divide-gray-100 mt-10">
     <div class="py-8 flex md:flex-row flex-col items-center justify-center">
         <div class="lg:w-96 md:w-56 md:mb-0 mb-6 flex-shrink-0 flex flex-col md:justify-start justify-center">
-            <span class="font-semibold title-font text-gray-700 lg:text-2xl">Debit & Credit Cards</span>
+            <span class="font-semibold title-font text-gray-700 lg:text-2xl">{{payment.title}}</span>
             <div class="flex mt-3 md:justify-start justify-center">
                 <div class="w-28 h-0.5 rounded-full bg-blue inline-flex"></div>
             </div>
         </div>
         <div class="md:flex-grow">
             <div class="flex flex-wrap -m-4 text-center mt-3">
+                {% for logo in payment.logoImages %}
+                {% set srcset = apos.image.srcset(logo.image) %}
                 <div class="p-1 sm:w-1/5 w-1/2">
-                    <img alt=""
-                        class="sm:w-20 sm:h-20 w-16 h-16 mb-6 object-cover object-center rounded-full inline-block border-2 border-gray-200 bg-white"
-                        src="/images/mastercard.png">
+                    <img alt="logo-image"
+                        class="sm:w-20 sm:h-20 w-16 h-16 mb-6 object-contain object-center rounded-full inline-block border-2 border-gray-200 bg-white"
+                        srcset="{{ srcset }}" src="{{ apos.attachment.url(logo.image) }}">
                 </div>
-                <div class="p-1 sm:w-1/5 w-1/2">
-                    <img alt=""
-                        class="sm:w-20 sm:h-20 w-16 h-16 mb-6 object-cover object-center rounded-full inline-block border-2 border-gray-200 bg-white"
-                        src="/images/maestro.png">
-                </div>
-                <div class="p-1 sm:w-1/5 w-1/2">
-                    <img alt=""
-                        class="sm:w-20 sm:h-20 w-16 h-16 mb-6 object-cover object-center rounded-full inline-block border-2 border-gray-200 bg-white"
-                        src="/images/visa.png">
-                </div>
-                <div class="p-1 sm:w-1/5 w-1/2">
-                    <img alt=""
-                        class="sm:w-20 sm:h-20 w-16 h-16 mb-6 object-cover object-center rounded-full inline-block border-2 border-gray-200 bg-white"
-                        src="/images/discover-logo.png">
-                </div>
-                <div class="p-1 sm:w-1/5 w-1/2">
-                    <img alt=""
-                        class="sm:w-20 sm:h-20 w-16 h-16 mb-6 object-cover object-center rounded-full inline-block border-2 border-gray-200 bg-white"
-                        src="/images/american-express.png">
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="py-8 flex md:flex-row flex-col items-center justify-center">
-        <div class="lg:w-96 md:w-56 md:mb-0 mb-6 flex-shrink-0 flex flex-col md:justify-start justify-center">
-            <span class="font-semibold title-font text-gray-700 lg:text-2xl">Mobile & NFC Payments</span>
-            <div class="flex mt-3 md:justify-start justify-center">
-                <div class="w-28 h-0.5 rounded-full bg-blue inline-flex"></div>
-            </div>
-        </div>
-        <div class="md:flex-grow">
-            <div class="flex flex-wrap -m-4 text-center mt-3">
-                <div class="p-1 sm:w-1/5 w-1/2">
-                    <img alt=""
-                        class="sm:w-20 sm:h-20 w-16 h-16 mb-6 object-cover object-center rounded-full inline-block border-2 border-gray-200 bg-white"
-                        src="/images/mastercard.png">
-                </div>
-                <div class="p-1 sm:w-1/5 w-1/2">
-                    <img alt=""
-                        class="sm:w-20 sm:h-20 w-16 h-16 mb-6 object-cover object-center rounded-full inline-block border-2 border-gray-200 bg-white"
-                        src="/images/maestro.png">
-                </div>
-                <div class="p-1 sm:w-1/5 w-1/2">
-                    <img alt=""
-                        class="sm:w-20 sm:h-20 w-16 h-16 mb-6 object-cover object-center rounded-full inline-block border-2 border-gray-200 bg-white"
-                        src="/images/visa.png">
-                </div>
-                <div class="p-1 sm:w-1/5 w-1/2">
-                    <img alt=""
-                        class="sm:w-20 sm:h-20 w-16 h-16 mb-6 object-cover object-center rounded-full inline-block border-2 border-gray-200 bg-white"
-                        src="/images/discover-logo.png">
-                </div>
-                <div class="p-1 sm:w-1/5 w-1/2">
-                    <img alt=""
-                        class="sm:w-20 sm:h-20 w-16 h-16 mb-6 object-cover object-center rounded-full inline-block border-2 border-gray-200 bg-white"
-                        src="/images/american-express.png">
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="py-8 flex md:flex-row flex-col items-center justify-center">
-        <div class="lg:w-96 md:w-56 md:mb-0 mb-6 flex-shrink-0 flex flex-col md:justify-start justify-center">
-            <span class="font-semibold title-font text-gray-700 lg:text-2xl">Static & Dynamic QR Codes</span>
-            <div class="flex mt-3 md:justify-start justify-center">
-                <div class="w-28 h-0.5 rounded-full bg-blue inline-flex"></div>
-            </div>
-        </div>
-        <div class="md:flex-grow">
-            <div class="flex flex-wrap -m-4 text-center mt-3">
-                <div class="p-1 sm:w-1/5 w-1/2">
-                    <img alt=""
-                        class="sm:w-20 sm:h-20 w-16 h-16 mb-6 object-cover object-center rounded-full inline-block border-2 border-gray-200 bg-white"
-                        src="/images/mastercard.png">
-                </div>
-                <div class="p-1 sm:w-1/5 w-1/2">
-                    <img alt=""
-                        class="sm:w-20 sm:h-20 w-16 h-16 mb-6 object-cover object-center rounded-full inline-block border-2 border-gray-200 bg-white"
-                        src="/images/maestro.png">
-                </div>
-                <div class="p-1 sm:w-1/5 w-1/2">
-                    <img alt=""
-                        class="sm:w-20 sm:h-20 w-16 h-16 mb-6 object-cover object-center rounded-full inline-block border-2 border-gray-200 bg-white"
-                        src="/images/visa.png">
-                </div>
-                <div class="p-1 sm:w-1/5 w-1/2">
-                    <img alt=""
-                        class="sm:w-20 sm:h-20 w-16 h-16 mb-6 object-cover object-center rounded-full inline-block border-2 border-gray-200 bg-white"
-                        src="/images/discover-logo.png">
-                </div>
-                <div class="p-1 sm:w-1/5 w-1/2">
-                    <img alt=""
-                        class="sm:w-20 sm:h-20 w-16 h-16 mb-6 object-cover object-center rounded-full inline-block border-2 border-gray-200 bg-white"
-                        src="/images/american-express.png">
-                </div>
+                {% endfor %}
             </div>
         </div>
     </div>
 </div>
+{% endfor %}

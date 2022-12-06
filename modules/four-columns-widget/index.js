@@ -10,280 +10,36 @@ module.exports = {
 
   fields: {
     add: {
-      category1: {
-        type: 'area',
-        label: 'Category 1',
-        options: {
-          widgets: {
-            '@apostrophecms/rich-text': {
-              // 👇 Toolbar configuration
-              toolbar: [
-                'styles',
-                'bold',
-                'italic',
-                '|',
-                'strike',
-                'link',
-                '|',
-                'horizontalRule',
-                'alignLeft',
-                'alignCenter',
-                'alignRight',
-                'alignJustify',
-                'undo',
-                'redo',
-              ],
-              // 👇 Styles configuration
-              styles: [
-                {
-                  tag: 'p',
-                  label: 'Paragraph (P)'
+      solutions: {
+        label: 'Solutions Section',
+        type: 'array',
+        titleField: 'Solutions Section',
+        fields: {
+          add: {
+            image: {
+              type: 'attachment',
+              label: 'Image',
+              options: {
+                widgets: {
+                  '@apostrophecms/image': {}
                 },
-                {
-                  tag: 'h1',
-                  label: 'Heading 1 (H1)'
-                },
-                {
-                  tag: 'h2',
-                  label: 'Heading 2 (H2)'
-                },
-                {
-                  tag: 'h3',
-                  label: 'Heading 3 (H3)'
-                },
-                {
-                  tag: 'h4',
-                  label: 'Heading 4 (H4)'
-                },
-                {
-                  tag: 'h5',
-                  label: 'Heading 5 (H5)'
-                },
-                {
-                  tag: 'h6',
-                  label: 'Heading 6 (H6)'
-                },
-              ]
+                limit: 1,
+              },
+              required: true
             },
-          },
-        },
-      },
-      category2: {
-        type: 'area',
-        label: 'Category 2',
-        options: {
-          widgets: {
-            '@apostrophecms/rich-text': {
-              // 👇 Toolbar configuration
-              toolbar: [
-                'styles',
-                'bold',
-                'italic',
-                '|',
-                'strike',
-                'link',
-                '|',
-                'horizontalRule',
-                'alignLeft',
-                'alignCenter',
-                'alignRight',
-                'alignJustify',
-                'undo',
-                'redo',
-              ],
-              // 👇 Styles configuration
-              styles: [
-                {
-                  tag: 'p',
-                  label: 'Paragraph (P)'
-                },
-                {
-                  tag: 'h1',
-                  label: 'Heading 1 (H1)'
-                },
-                {
-                  tag: 'h2',
-                  label: 'Heading 2 (H2)'
-                },
-                {
-                  tag: 'h3',
-                  label: 'Heading 3 (H3)'
-                },
-                {
-                  tag: 'h4',
-                  label: 'Heading 4 (H4)'
-                },
-                {
-                  tag: 'h5',
-                  label: 'Heading 5 (H5)'
-                },
-                {
-                  tag: 'h6',
-                  label: 'Heading 6 (H6)'
-                },
-              ]
+            title: {
+              label: 'Title',
+              type: 'string'
             },
-          },
-        },
-      },
-      category3: {
-        type: 'area',
-        label: 'Category 3',
-        options: {
-          widgets: {
-            '@apostrophecms/rich-text': {
-              // 👇 Toolbar configuration
-              toolbar: [
-                'styles',
-                'bold',
-                'italic',
-                '|',
-                'strike',
-                'link',
-                '|',
-                'horizontalRule',
-                'alignLeft',
-                'alignCenter',
-                'alignRight',
-                'alignJustify',
-                'undo',
-                'redo',
-              ],
-              // 👇 Styles configuration
-              styles: [
-                {
-                  tag: 'p',
-                  label: 'Paragraph (P)'
-                },
-                {
-                  tag: 'h1',
-                  label: 'Heading 1 (H1)'
-                },
-                {
-                  tag: 'h2',
-                  label: 'Heading 2 (H2)'
-                },
-                {
-                  tag: 'h3',
-                  label: 'Heading 3 (H3)'
-                },
-                {
-                  tag: 'h4',
-                  label: 'Heading 4 (H4)'
-                },
-                {
-                  tag: 'h5',
-                  label: 'Heading 5 (H5)'
-                },
-                {
-                  tag: 'h6',
-                  label: 'Heading 6 (H6)'
-                },
-              ]
+            description: {
+              label: 'Description',
+              type: 'string'
             },
-          },
-        },
-      },
-      category4: {
-        type: 'area',
-        label: 'Category 4',
-        options: {
-          widgets: {
-            '@apostrophecms/rich-text': {
-              // 👇 Toolbar configuration
-              toolbar: [
-                'styles',
-                'bold',
-                'italic',
-                '|',
-                'strike',
-                'link',
-                '|',
-                'horizontalRule',
-                'alignLeft',
-                'alignCenter',
-                'alignRight',
-                'alignJustify',
-                'undo',
-                'redo',
-              ],
-              // 👇 Styles configuration
-              styles: [
-                {
-                  tag: 'p',
-                  label: 'Paragraph (P)'
-                },
-                {
-                  tag: 'h1',
-                  label: 'Heading 1 (H1)'
-                },
-                {
-                  tag: 'h2',
-                  label: 'Heading 2 (H2)'
-                },
-                {
-                  tag: 'h3',
-                  label: 'Heading 3 (H3)'
-                },
-                {
-                  tag: 'h4',
-                  label: 'Heading 4 (H4)'
-                },
-                {
-                  tag: 'h5',
-                  label: 'Heading 5 (H5)'
-                },
-                {
-                  tag: 'h6',
-                  label: 'Heading 6 (H6)'
-                },
-              ]
-            },
-          },
-        },
-      },
-      imgOne: {
-        type: 'area',
-        label: 'Image 1',
-        className: 'columns-images ',
-        options: {
-          widgets: {
-            '@apostrophecms/image': {}
-          },
-          limit: 1,
-        },
-      },
-      imgTwo: {
-        type: 'area',
-        label: 'Image 2',
-        className: 'columns-images ',
-        options: {
-          widgets: {
-            '@apostrophecms/image': {}
-          },
-          limit: 1,
-        },
-      },
-      imgThree: {
-        type: 'area',
-        label: 'Image 3',
-        className: 'columns-images',
-        options: {
-          widgets: {
-            '@apostrophecms/image': {}
-          },
-          limit: 1,
-        },
-      },
-      imgFour: {
-        type: 'area',
-        label: 'Image 4',
-        className: 'columns-images ',
-        options: {
-          widgets: {
-            '@apostrophecms/image': {}
-          },
-          limit: 1,
+            url: {
+              label: 'Solution Url',
+              type: 'url'
+            }
+          }
         },
       },
     }

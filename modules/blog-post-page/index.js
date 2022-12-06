@@ -4,6 +4,5 @@ module.exports = {
     options: {
         label: 'Blog Post Page',
         pieceModuleName: 'blog-post',
-        perPage: 6,
     }
 };

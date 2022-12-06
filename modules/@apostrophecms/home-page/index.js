@@ -4,6 +4,14 @@ module.exports = {
   },
   fields: {
     add: {
+      hero: {
+        type: 'area',
+        options: {
+          widgets: {
+            'hero-section': {},
+          }
+        }
+      },
       solutions: {
         type: 'area',
         options: {
@@ -20,11 +28,11 @@ module.exports = {
           }
         }
       },
-      ourClients: {
+      clients: {
         type: 'area',
         options: {
           widgets: {
-            'carousel': {},
+            'our-clients': {},
           }
         }
       },
@@ -36,19 +44,11 @@ module.exports = {
           }
         }
       },
-      whyPayrallel: {
-        type: 'area',
-        options: {
-          widgets: {
-            'why-payrallel': {},
-          }
-        }
-      },
     },
     group: {
       homeFields: {
         label: 'Homepage Section fields',
-        fields: ['solutions', 'industries', 'ourClients', 'payments', 'whyPayrallel']
+        fields: ['hero', 'solutions', 'industries', 'clients', 'payments']
       }
     }
   }

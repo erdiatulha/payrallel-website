@@ -11,10 +11,10 @@
 </div>
 <section class="gray">
   <div class="container px-5 pb-24 pt-36 mx-auto gray">
-    <div class="flex flex-wrap -m-4">
+    <div class="flex flex-wrap -m-4 card-blog">
       {% for blog in data.pieces %}
       {% set srcset = apos.image.srcset(blog.coverImage) %}
-      <div class="p-4 md:w-1/3">
+      <div class="p-4 md:w-1/3 card-content">
         <div class="h-full border-2 border-gray-200 border-opacity-60 overflow-hidden"
           style="background-color: #F5F5F5;">
           <a href="{{ blog._url }}"><img class="lg:h-48 md:h-36 w-full object-cover object-center hover:opacity-75"
@@ -53,11 +53,19 @@
       {% endfor %}
 
     </div>
-    {{ pager.render({
-      page: data.currentPage,
-      total: data.totalPages,
-      class: 'blog-pagination'
-    }, data.url) }}
-    {% endblock %}
+    <!-- <div class="pagination-blog">
+      <li class="page-item previous-page disable"><a class="page-link-blog" href="#">Prev</a></li>
+      <li class="page-item current-page active-page"><a class="page-link-blog" href="#">1</a></li>
+      <li class="page-item dots"><a class="page-link-blog" href="#">...</a></li>
+      <li class="page-item current-page"><a class="page-link-blog" href="#">5</a></li>
+      <li class="page-item current-page"><a class="page-link-blog" href="#">6</a></li>
+      <li class="page-item dots"><a class="page-link-blog" href="#">...</a></li>
+      <li class="page-item current-page"><a class="page-link-blog" href="#">10</a></li>
+      <li class="page-item next-page"><a class="page-link-blog" href="#">Next</a></li>
+    </div> -->
+    <div id="pagination-container" class="my-10">
+
+    </div>
   </div>
 </section>
+{% endblock %}

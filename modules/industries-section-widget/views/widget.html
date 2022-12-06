@@ -1,34 +1,21 @@
 <div class="flex flex-wrap -m-4">
+    {% for industry in data.widget.industries %}
+    {% set srcset = apos.image.srcset(industry.image) %}
     <div class="xl:w-1/4 md:w-1/2 sm:w-full w-full overflow-hidden">
-        <div class="p-6 cursor-pointer zoom-in"
-            style="background-image: url('/images/Food and Beverages.jpg'); background-size: cover; height: 80vh;">
-            <a class="mb-4 font-bold text-white title-font no-underline text-lg cursor-pointer hover-white"
-                href="/">Food & Beverages
-            </a>
+        <div class="p-6 cursor-pointer relative industries-animation-container zoom-in"
+            style="background-image: url('{{ apos.attachment.url(industry.image) }}'); background-size: cover; height: 80vh;">
+            <div class="industries-title">
+                <a class="mb-4 font-bold text-white title-font no-underline text-lg cursor-pointer hover-white"
+                    href="{{industry.url}}">{{industry.title}}
+                </a>
+            </div>
+            <div class="industries-title-animation">
+                <a class="mb-4 font-bold text-white title-font no-underline text-lg cursor-pointer hover-white"
+                    href="{{industry.url}}">{{industry.title}}
+                </a>
+            </div>
+
         </div>
     </div>
-    <div class="xl:w-1/4 md:w-1/2 sm:w-full w-full overflow-hidden">
-        <div class="p-6 cursor-pointer zoom-in"
-            style="background-image: url('/images/image-1.jpg'); background-size: cover; height: 80vh;">
-            <a class="mb-4 font-bold text-white title-font no-underline text-lg cursor-pointer hover-white"
-                href="/">Brick & Mortar Retail
-            </a>
-        </div>
-    </div>
-    <div class="xl:w-1/4 md:w-1/2 sm:w-full w-full overflow-hidden">
-        <div class="p-6 cursor-pointer zoom-in"
-            style="background-image: url('/images/image-2.jpg'); background-size: cover; height: 80vh;">
-            <a class="mb-4 font-bold text-white title-font no-underline text-lg cursor-pointer hover-white"
-                href="/">E-Commerce
-            </a>
-        </div>
-    </div>
-    <div class="xl:w-1/4 md:w-1/2 sm:w-full w-full overflow-hidden">
-        <div class="p-6 cursor-pointer zoom-in"
-            style="background-image: url('/images/Unattended.jpg'); background-size: cover; height: 80vh;">
-            <a class="mb-4 font-bold text-white title-font no-underline text-lg cursor-pointer hover-white"
-                href="/">Unattended Retail
-            </a>
-        </div>
-    </div>
+    {% endfor %}
 </div>
