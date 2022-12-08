@@ -53,12 +53,79 @@ module.exports = {
             },
           }
         }
-      }
+      },
+      body: {
+        label: 'Blog Post Content',
+        // The `area` field type supports dynamic content widgets. It is
+        // covered in the "Areas and widgets" guide section.
+        type: 'area',
+        options: {
+          widgets: {
+            '@apostrophecms/rich-text': {
+              // 👇 Toolbar configuration
+              toolbar: [
+                'styles',
+                'bold',
+                'italic',
+                '|',
+                'strike',
+                'link',
+                '|',
+                'horizontalRule',
+                '|',
+                'bulletList',
+                'orderedList',
+                'blockquote',
+                'codeBlock',
+                '|',
+                'alignLeft',
+                'alignCenter',
+                'alignRight',
+                'alignJustify',
+                'undo',
+                'redo',
+
+              ],
+              // 👇 Styles configuration
+              styles: [
+                {
+                  tag: 'p',
+                  label: 'Paragraph (P)'
+                },
+                {
+                  tag: 'h1',
+                  label: 'Heading 1 (H1)'
+                },
+                {
+                  tag: 'h2',
+                  label: 'Heading 2 (H2)'
+                },
+                {
+                  tag: 'h3',
+                  label: 'Heading 3 (H3)'
+                },
+                {
+                  tag: 'h4',
+                  label: 'Heading 4 (H4)'
+                }
+              ]
+            },
+            '@apostrophecms/image': {
+              options: {
+                className: 'content-image'
+              }
+            },
+            '@apostrophecms/video': {},
+            'columns': {},
+            'containers': {},
+          }
+        }
+      },
     },
     group: {
       industriesFields: {
         label: 'Industries fields',
-        fields: ['title', 'shortDescription', 'image', 'titleDetails', 'subTitle', 'subFeature', 'features']
+        fields: ['title', 'shortDescription', 'image', 'titleDetails', 'subTitle', 'subFeature', 'features', 'body']
       }
     }
   }

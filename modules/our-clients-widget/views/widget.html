@@ -4,9 +4,8 @@
             {% for client in data.widget.clients %}
             {% set srcset = apos.image.srcset(client.image) %}
             <li class="splide__slide">
-                <div class="">
-                    <img srcset="{{ srcset }}" src="{{ apos.attachment.url(client.image) }}"
-                        class="object-center object-cover" alt="" style="min-height: 300px;">
+                <div class="splide-image">
+                    <img srcset="{{ srcset }}" src="{{ apos.attachment.url(client.image) }}" class="" alt="">
                 </div>
             </li>
             {% endfor %}

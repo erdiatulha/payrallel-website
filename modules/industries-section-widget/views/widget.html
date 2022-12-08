@@ -2,7 +2,7 @@
     {% for industry in data.widget.industries %}
     {% set srcset = apos.image.srcset(industry.image) %}
     <div class="xl:w-1/4 md:w-1/2 sm:w-full w-full overflow-hidden">
-        <div class="p-6 cursor-pointer relative industries-animation-container zoom-in"
+        <div class="p-6 relative industries-animation-container zoom-in"
             style="background-image: url('{{ apos.attachment.url(industry.image) }}'); background-size: cover; height: 80vh;">
             <div class="industries-title">
                 <a class="mb-4 font-bold text-white title-font no-underline text-lg cursor-pointer hover-white"

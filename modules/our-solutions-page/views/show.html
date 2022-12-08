@@ -1,10 +1,10 @@
 {# modules/article-page/views/show.html #}
 {% extends "layout.html" %}
 {% block main %}
-<div class="w-full bg-cover h-96 bg-no-repeat flex justify-center"
+<div class="w-full bg-cover h-96 bg-no-repeat flex justify-center overlay-bg"
     style="background-image: url('{{ apos.attachment.url(data.piece.image) }}');">
-    <div class="flex flex-col items-center justify-center px-9 text-center">
-        <h1 class="sm:text-5xl text-5xl text-white uppercase font-light tracking-widest">{{data.piece.titleDetails}}
+    <div class="flex flex-col items-center justify-center px-9 text-center" style="z-index:1;">
+        <h1 class="sm:text-5xl text-2xl text-white uppercase font-light tracking-widest">{{data.piece.titleDetails}}
         </h1>
         <p class="mt-3 text-base text-color uppercase font-bold tracking-widest">{{data.piece.subTitle}}</p>
     </div>
@@ -43,6 +43,9 @@
                 </a>
             </div>
             {% endfor %}
+        </div>
+        <div>
+            {% area data.piece, 'body' %}
         </div>
     </div>
 </section>
