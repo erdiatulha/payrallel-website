@@ -3,6 +3,7 @@ module.exports = {
   options: {
     label: 'Our Solutions',
     // Additionally add a `pluralLabel` option if needed.
+
   },
   fields: {
     add: {

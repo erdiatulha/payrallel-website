@@ -12,21 +12,30 @@ module.exports = {
           }
         }
       },
-      solutions: {
-        type: 'area',
-        options: {
-          widgets: {
-            'four-columns': {},
+      _solutions: {
+        type: 'relationship',
+        label: 'Solutions',
+        withType: 'our-solutions',
+        builders: {
+          project: {
+            title: 1,
+            image: 1,
+            shortDescription: 1,
+            _url: 1
           }
-        }
+        },
       },
-      industries: {
-        type: 'area',
-        options: {
-          widgets: {
-            'industries-section': {},
+      _industries: {
+        type: 'relationship',
+        label: 'Industries',
+        withType: 'industries',
+        builders: {
+          project: {
+            title: 1,
+            image: 1,
+            _url: 1
           }
-        }
+        },
       },
       clients: {
         type: 'area',
@@ -48,7 +57,7 @@ module.exports = {
     group: {
       homeFields: {
         label: 'Homepage Section fields',
-        fields: ['hero', 'solutions', 'industries', 'clients', 'payments']
+        fields: ['hero', 'clients', 'payments', '_solutions', '_industries']
       }
     }
   }
